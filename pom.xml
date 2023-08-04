@@ -60,5 +60,10 @@
       <version>1.18.28</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-typehandlers-jsr310</artifactId>
+      <version>1.0.2</version>
+    </dependency>
   </dependencies>
 </project>
