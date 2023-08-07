@@ -35,8 +35,8 @@
   - 회원가입 양식 : /WEB-INF/view/member/join.jsp + _form.jsp(공통 양식)
   - 정보 수정 양식 : /WEB-INF/view/member/info.jsp + _form.jsp(공통 양식)
   - 로그인 양식 : /WEB-INF/view/member/login.jsp
-  - 아이디 찾기 : /WEB-INF/view/member/findId.jsp
-  - 비밀번호 찾기 : /WEB-INF/view/member/findPw.jsp
+  - 아이디 찾기 : /WEB-INF/view/member/find_id.jsp
+  - 비밀번호 찾기 : /WEB-INF/view/member/find_pw.jsp
   - 작업 목록 : /WEB-INF/works/list.jsp
   - 작업 조회 : /WEB-INF/works/view.jsp
   - 작업 등록 : /WEB-INF/works/add.jsp + _form.jsp(공통 양식)
