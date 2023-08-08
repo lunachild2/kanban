@@ -54,4 +54,5 @@
   - models/works/InfoService.java : 작업 조회(개별 + 목록)
   - models/works/DeleteService.java : 작업 삭제
 - 칸반 등록, 수정, 삭제, 조회
-  - ㅇ
+- 칸반 등록,수정 양식
+- 칸반 등록 컨트롤러 처리
