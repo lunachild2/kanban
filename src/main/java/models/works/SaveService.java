@@ -1,16 +1,25 @@
 package models.works;
 
+import Validators.Validator;
+
 public class SaveService {
 
     private WorkDao workDao;
 
-    public SaveService(WorkDao workDao) {
+    private Validator<Work> validator;
+
+    public SaveService(WorkDao workDao, Validator<Work> validator) {
         this.workDao = workDao;
+        this.validator = validator;
     }
 
     public void save(Work work) {
-        // work 데이터 검증 (유효성 검사)
+        // 유효성 검사
+        validator.Check(work);
 
-        workDao.save(work); // 의존
+        boolean result = workDao.save(work); // 의존
+        if(!result) { // 등록 실패
+            throw new WorkSaveException();
+        }
     }
 }
