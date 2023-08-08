@@ -1,3 +1,5 @@
-window.addEventListener("DOMContentLoaded", function()) {
-    CKEDITOR.replace("content");
+window.addEventListener("DOMContentLoaded", function() {
+    CKEDITOR.replace("content", {
+        height: 350
+    });
 });
