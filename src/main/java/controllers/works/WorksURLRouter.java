@@ -1,7 +1,7 @@
-package controlles.works;
+package controllers.works;
 
-import controlles.Controller;
-import controlles.URLRouter;
+import controllers.Controller;
+import controllers.URLRouter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -17,7 +17,7 @@ public class WorksURLRouter implements URLRouter {
     public void route(HttpServletRequest req, HttpServletResponse resp, String location) {
         String mode = getMode(req.getRequestURI(), location);
         mode = mode == null || mode.isBlank() ? "list" : mode;
-        if(mode.matches("\\d")) { // 작업조회 모드
+        if(mode.matches("\\d*")) { // 작업조회 모드
             mode = "view";
         }
         Controller controller = null;

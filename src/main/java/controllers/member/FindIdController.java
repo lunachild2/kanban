@@ -1,7 +1,7 @@
-package controlles.member;
+package controllers.member;
 
 import commons.ViewUtils;
-import controlles.Controller;
+import controllers.Controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
