@@ -1,4 +1,4 @@
-package controlles.member;
+package controllers.member;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;

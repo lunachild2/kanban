@@ -1,14 +1,13 @@
-package controlles.member;
+package controllers.works;
 
-import commons.ViewUtils;
-import controlles.Controller;
+import controllers.Controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class FindPwController implements Controller {
+public class DeleteController implements Controller {
     @Override
     public void get(HttpServletRequest req, HttpServletResponse resp) {
-        ViewUtils.load(req, resp, "member", "find_pw");
+
     }
 
     @Override

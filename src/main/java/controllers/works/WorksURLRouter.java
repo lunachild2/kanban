@@ -1,7 +1,7 @@
-package controlles.works;
+package controllers.works;
 
-import controlles.Controller;
-import controlles.URLRouter;
+import controllers.Controller;
+import controllers.URLRouter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 

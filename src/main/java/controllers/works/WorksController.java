@@ -1,6 +1,6 @@
-package controlles.works;
+package controllers.works;
 
-import controlles.URLRouter;
+import controllers.URLRouter;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
