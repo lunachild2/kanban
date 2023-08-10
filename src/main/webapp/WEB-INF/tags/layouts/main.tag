@@ -10,21 +10,22 @@
 <layout:common title="${title}">
     <jsp:attribute name="header">
         <section id="site_top" class="layout_width">
-            <div class="left">
+            <div class='left'>
                 <a href="${mainUrl}">
-                <i class="xi-home"></i>
-                메인페이지</a>
+                    <i class="xi-home"></i>
+                    메인페이지
+                </a>
             </div>
             <div class="right">
                 <a href="${loginUrl}">
-                <i class="xi-log-in"></i>
-                로그인</a>
+                    <i class="xi-log-in"></i> 로그인
+                </a>
                 <a href="${joinUrl}">
-                <i class="xi-user-plus"></i>
-                회원가입</a>
+                    <i class="xi-user-plus"></i> 회원가입
+                </a>
                 <a href="${workListUrl}">
-                <i class="xi-list"></i>
-                작업목록</a>
+                    <i class="xi-list"></i> 작업목록
+                </a>
             </div>
         </section>
     </jsp:attribute>
