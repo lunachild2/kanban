@@ -11,4 +11,17 @@
         <result column="regDt" property="regDt" />
         <result column="modDt" property="modDt" />
     </resultMap>
+
+    <insert id="add" parameterType="models.member.Users" useGeneratedKeys="true" keyProperty="userNo">
+        INSERT INTO users (userId, userPw, userNm, email, mobile)
+            VALUES (#{userId}, #{userPw}, #{userNm}, #{email}, #{mobile})
+    </insert>
+
+    <select id="info" parameterType="models.member.Users" resultMap="userMap">
+        SELECT * FROM users WHERE userId=#{userId}
+    </select>
+
+    <select id="exists" parameterType="models.member.Users" resultType="int">
+        SELECT COUNT(*) FROM users WHERE userId=#{userId}
+    </select>
 </mapper>

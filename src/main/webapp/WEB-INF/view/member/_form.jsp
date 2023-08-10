@@ -24,6 +24,12 @@
     </dd>
 </dl>
 <dl>
+    <dt>이메일</dt>
+    <dd>
+        <input type="text" name="email">
+    </dd>
+</dl>
+<dl>
     <dt>휴대전화번호</dt>
     <dd>
         <input type="text" name="mobile">
