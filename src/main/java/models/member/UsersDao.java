@@ -1,11 +1,12 @@
 package models.member;
 
 import configs.DBConnection;
+import controllers.member.UserForm;
 import org.apache.ibatis.session.SqlSession;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class UsersDao {
-    public boolean register(Users users) {
+    public boolean register(UserForm users) {
         SqlSession sqlSession = DBConnection.getSession();
         String hash = BCrypt.hashpw(users.getUserPw(), BCrypt.gensalt(12));
         users.setUserPw(hash);
@@ -20,7 +21,7 @@ public class UsersDao {
     public Users get(String userId) {
         SqlSession sqlSession = DBConnection.getSession();
 
-        Users params = new Users();
+        UserForm params = new UserForm();
         params.setUserId(userId);
 
         Users users = sqlSession.selectOne("UserMapper.info", params);
@@ -29,6 +30,11 @@ public class UsersDao {
     }
 
     public boolean exists(String userId) {
+        SqlSession sqlSession = DBConnection.getSession();
+        UserForm params = new UserForm();
+        params.setUserId(userId);
+        int cnt = sqlSession.selectOne("UserMapper.exists", params);
 
+        return cnt > 0;
     }
 }
