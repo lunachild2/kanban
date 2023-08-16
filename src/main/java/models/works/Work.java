@@ -9,6 +9,7 @@ public class Work {
 
     private long workNo;
     private long userNo;
+    private String userNm;
     private Status status = Status.READY;
     private String subject;
     private String content;

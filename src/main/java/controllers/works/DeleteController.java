@@ -15,7 +15,7 @@ public class DeleteController implements Controller {
         try {
             DeleteService deleteService = WorkServiceManager.getInstance().deleteService();
             long workNo = UrlUtils.getPatternData(req, "edit/(\\d*)");
-            deleteService.delete(workNo);
+            deleteService.delete(workNo, req);
 
             // 성공시 -> 목록 이동
             resp.sendRedirect(req.getContextPath() + "/works");
@@ -27,7 +27,7 @@ public class DeleteController implements Controller {
 
     @Override
     public void post(HttpServletRequest req, HttpServletResponse resp) {
-
+        get(req, resp);
     }
 
     private long getWorkNo(HttpServletRequest req) {
