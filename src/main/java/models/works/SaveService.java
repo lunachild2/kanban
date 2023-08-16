@@ -1,7 +1,9 @@
 package models.works;
 
 import Validators.Validator;
+import commons.MemberUtil;
 import jakarta.servlet.http.HttpServletRequest;
+import models.member.Users;
 
 public class SaveService {
 
@@ -35,6 +37,11 @@ public class SaveService {
         String workNo = req.getParameter("workNo");
         if(workNo != null && !workNo.isBlank()) {
             work.setWorkNo(Long.parseLong(workNo));
+        }
+
+        if(MemberUtil.isLogin(req)) { // 로그인한 경우 회원번호 DB에 기록
+            Users users = MemberUtil.getUser(req);
+            work.setUserNo(users.getUserNo());
         }
 
         save(work);
