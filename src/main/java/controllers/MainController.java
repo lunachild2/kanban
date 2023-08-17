@@ -14,6 +14,7 @@ public class MainController extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         req.setAttribute("addCss", new String[] {"member/login"});
         ViewUtils.load(req, resp, "member", "login");
 
