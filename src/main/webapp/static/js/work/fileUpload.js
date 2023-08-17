@@ -4,6 +4,16 @@ const fileUpload = {
         for(const file of files) {
             formData.append("files", file);
         }
+        // /works/add -> ../../file/upload
+        const xhr = new XMLHttpRequest()
+        xhr.open("POST", "../file/upload");
+        xhr.send(formData);
+        xhr.onreadystatechange = function() {
+            if(xhr.status == 200 && xhr.readyState == XMLHttpRequest.DONE) {
+                const res = xhr.responseText;
+                console.log(res);
+            }
+        };
     }
 };
 
